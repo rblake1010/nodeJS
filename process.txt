@@ -1,0 +1,55 @@
+Text Editor: Sublime
+Language: HTML, CSS, JS
+Format: Jade
+Compiler: Prepros
+
+
+Folder Structure
+ -assets
+	 -js
+	   - modernizer.js
+	   - functions.js
+	   - jquery.js
+	 -img
+	 -css
+	   - 1-tools
+		     - lesshat
+		     - skeleton
+		     - fonts.less
+		     - normalize.less
+		     - size.less
+	   - 2-basic
+		     - body-element.less
+		     - links.less
+		     - typography.less
+		     - var.less
+	   - 3-partials
+		     - header
+		     - footer
+		     - sidebar
+		     - nav
+		     - etc
+	   - 4-pages
+		     - home page
+		     - about page
+  index.html
+  index.jade
+
+Source Control
+Responsive: Content Driven/Responsive First - em and rem
+	- style layout (font type, font-size, spacing, add content)
+	- style elements (colors, details)
+Project Conclusion: minification, autoprefix, browser compatibily
+google friendly: schema or nothing
+
+
+
+Aspects of Cross Compatibility
+
+- What kind of Device are they using?
+- Operating System
+- Display
+- Input Mechanisms
+- Browser
+- Browser Settings
+- Accessibility
