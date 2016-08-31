@@ -1,0 +1,34 @@
+.region.region--title{
+	display:flex;
+	justify-content:center;
+	padding: 30px 0 33px;
+
+	.block__logo{
+		//@include span-columns(3);
+		margin-right: 54px;
+	}
+	.block__title{
+		//@include span-columns(5);
+		h1{
+			font-weight: 300;
+			text-transform: uppercase;
+			line-height: 1;
+			margin:0;
+			position:relative;
+			span{
+				font-weight: 700;
+				color: $astronaut-blue;
+			}
+			&:before{
+				content:'';
+				display: block;
+				position: absolute;
+				width:2px; 
+				height:61px;
+				background: #C3C6C8;
+				left:-27px;
+				top:-2px;
+			}
+		}
+	}
+}

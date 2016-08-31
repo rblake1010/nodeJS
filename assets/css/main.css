@@ -1,3 +1,4 @@
+@import 'https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700';
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 /**
  * 1. Set default font family to sans-serif.
@@ -2613,6 +2614,48 @@ html {
   -webkit-animation-name: slideOutUp;
   animation-name: slideOutUp; }
 
+.region--main .block__piechart .point__prevention, .region--main .block__piechart .point__rehab, .region--main .block__piechart .point__detection, .region--main .block__piechart .point__cross-cutting {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 4px solid #fff;
+  position: absolute;
+  visibility: hidden; }
+
+.region--prevention .block__title h3, .region--rehabilitation .block__title h3, .region--detection .block__title h3, .region--cross-cutting .block__title h3 {
+  font-size: 19px;
+  line-height: 1;
+  margin-bottom: 25px;
+  font-weight: 500;
+  margin-left: 16px; }
+
+.region--prevention .block__title .border, .region--rehabilitation .block__title .border {
+  width: 0%;
+  height: 4px;
+  position: relative;
+  top: -11px; }
+
+.region--prevention .block__title span, .region--rehabilitation .block__title span, .region--detection .block__title span, .region--cross-cutting .block__title span {
+  font-style: italic;
+  font-size: 15px;
+  font-weight: 300; }
+
+.region--prevention .block__list ul li:before, .region--rehabilitation .block__list ul li:before, .region--detection .block__list ul li:before, .region--cross-cutting .block__list ul li:before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  top: 10px;
+  left: -7px; }
+
+.region--detection .block__title .border, .region--cross-cutting .block__title .border {
+  position: absolute;
+  width: 229.5px;
+  height: 4px;
+  clip: rect(0px 229.5px 100px 0px); }
+
 * {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -2626,7 +2669,18 @@ body {
   line-height: 1.6;
   color: #666;
   -webkit-font-smoothing: antialiased;
-  -webkit-text-size-adjust: 100%; }
+  -webkit-text-size-adjust: 100%;
+  font-family: 'Roboto', sans-serif; }
+
+.container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  background: url("/assets/images/bg.png") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
 
 a {
   color: red;
@@ -2634,3 +2688,194 @@ a {
   outline: 0; }
   a:hover, a:focus {
     color: #40a6ff; }
+
+.region.region--title {
+  display: flex;
+  justify-content: center;
+  padding: 30px 0 33px; }
+  .region.region--title .block__logo {
+    margin-right: 54px; }
+  .region.region--title .block__title h1 {
+    font-weight: 300;
+    text-transform: uppercase;
+    line-height: 1;
+    margin: 0;
+    position: relative; }
+    .region.region--title .block__title h1 span {
+      font-weight: 700;
+      color: #003F5F; }
+    .region.region--title .block__title h1:before {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 2px;
+      height: 61px;
+      background: #C3C6C8;
+      left: -27px;
+      top: -2px; }
+
+main {
+  display: flex;
+  justify-content: space-around;
+  padding: 0 50px; }
+
+.region--main .block__piechart {
+  background: url("/assets/images/piechart.png");
+  width: 511px;
+  height: 461px;
+  position: relative;
+  visibility: hidden; }
+  .region--main .block__piechart .point__prevention {
+    background: #00a160;
+    left: 31px;
+    top: 114px; }
+  .region--main .block__piechart .point__rehab {
+    background: #F8971D;
+    bottom: 164px;
+    left: 122px; }
+  .region--main .block__piechart .point__detection {
+    background: #00A4E4;
+    top: 129px;
+    right: 129px; }
+  .region--main .block__piechart .point__cross-cutting {
+    background: #003F5F;
+    bottom: 60px;
+    right: 68px; }
+
+section.left {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 255px; }
+  section.left .region {
+    margin-bottom: 40px; }
+
+.region--prevention .block__title {
+  position: relative; }
+  .region--prevention .block__title h3 {
+    color: #00a160; }
+  .region--prevention .block__title .border {
+    background: #00a160; }
+  .region--prevention .block__title .border--point {
+    height: 2px;
+    background: #00a160;
+    width: 133px;
+    position: absolute;
+    right: -96px;
+    bottom: -21px;
+    transform: rotate(211deg);
+    -ms-transform: rotate(211deg);
+    -webkit-transform: rotate(211deg);
+    clip: rect(0px 133px 100px 0px);
+    visibility: hidden; }
+
+.region--prevention .block__list ul {
+  list-style: none;
+  padding: 0;
+  margin-left: 10px; }
+  .region--prevention .block__list ul li {
+    padding-left: 0.5em;
+    position: relative; }
+    .region--prevention .block__list ul li:before {
+      background: #00a160; }
+
+.region--rehabilitation .block__title {
+  position: relative; }
+  .region--rehabilitation .block__title h3 {
+    color: #F8971D; }
+  .region--rehabilitation .block__title .border {
+    background: #F8971D; }
+  .region--rehabilitation .block__title .border--point {
+    height: 2px;
+    background: #F8971D;
+    width: 230px;
+    position: absolute;
+    right: -190px;
+    bottom: 66px;
+    transform: rotate(152deg);
+    -ms-transform: rotate(152deg);
+    -webkit-transform: rotate(152deg);
+    z-index: 500;
+    visibility: hidden;
+    clip: rect(0px 230px 100px 0px); }
+
+.region--rehabilitation .block__list ul {
+  list-style: none;
+  padding: 0;
+  margin-left: 10px; }
+  .region--rehabilitation .block__list ul li {
+    padding-left: 0.5em;
+    position: relative; }
+    .region--rehabilitation .block__list ul li:before {
+      background: #F8971D; }
+
+section.right {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 255px;
+  position: relative;
+  right: -20px;
+  margin-top: 20px; }
+  section.right .region {
+    margin-bottom: 40px; }
+
+.region--detection .block__title {
+  position: relative; }
+  .region--detection .block__title h3 {
+    color: #00A4E4; }
+  .region--detection .block__title .border {
+    background: #00A4E4;
+    top: 50px; }
+  .region--detection .block__title .border--point {
+    height: 2px;
+    background: #00A4E4;
+    width: 212px;
+    position: absolute;
+    left: -207px;
+    bottom: -46px;
+    clip: rect(0px 212px 100px 0px);
+    transform: rotate(-17deg);
+    -ms-transform: rotate(-17deg);
+    -webkit-transform: rotate(-17deg);
+    z-index: 500;
+    visibility: hidden; }
+
+.region--detection .block__list ul {
+  list-style: none;
+  padding: 0;
+  margin-left: 10px; }
+  .region--detection .block__list ul li {
+    padding-left: 0.5em;
+    position: relative; }
+    .region--detection .block__list ul li:before {
+      background: #00A4E4; }
+
+.region--cross-cutting .block__title {
+  position: relative; }
+  .region--cross-cutting .block__title h3 {
+    color: #003F5F; }
+  .region--cross-cutting .block__title .border {
+    background: #003F5F;
+    top: 33px; }
+  .region--cross-cutting .block__title .border--point {
+    height: 2px;
+    background: #003F5F;
+    width: 145px;
+    position: absolute;
+    left: -143px;
+    top: 49px;
+    transform: rotate(-12deg);
+    -ms-transform: rotate(-12deg);
+    -webkit-transform: rotate(-12deg);
+    z-index: 500;
+    clip: rect(0px 145px 100px 0px);
+    visibility: hidden; }
+
+.region--cross-cutting .block__list ul {
+  list-style: none;
+  padding: 0;
+  margin-left: 10px; }
+  .region--cross-cutting .block__list ul li {
+    padding-left: 0.5em;
+    position: relative; }
+    .region--cross-cutting .block__list ul li:before {
+      background: #003F5F; }

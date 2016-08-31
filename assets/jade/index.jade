@@ -6,6 +6,12 @@ html(lang="en")
 		meta(name="viewport", content="width=device-width, initial-scale=1")
 		link(rel="stylesheet", href="assets/css/main.css")
 	body
-		h1 Testing 
-		h2 Again 
-	include partials/scripts
+		.container
+			button.btnRestart(style="position:absolute; right:0; bottom:0;") Restart
+			include partials/header
+			main
+				include partials/left-side 
+				include partials/piechart
+				include partials/right-side
+
+		include partials/scripts

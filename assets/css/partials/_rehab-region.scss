@@ -1,0 +1,45 @@
+.region--rehabilitation{
+	.block__title{
+		position:relative;
+		h3{
+			color: $tree-poppy;
+			@extend %block-title;
+		}
+		.border{				
+			background:$tree-poppy;
+			@extend %border;
+		}
+		.border--point{
+			height:2px;
+			background:$tree-poppy;
+			width:230px;
+			position:absolute;
+			right:-190px;
+			bottom:66px;
+			transform: rotate(152deg);
+			-ms-transform: rotate(152deg); 
+				-webkit-transform: rotate(152deg);
+				z-index: 500;
+				visibility: hidden;
+				clip:rect(0px 230px 100px 0px);
+		}
+		span{
+			@extend %italic-span;
+		}
+	}
+	.block__list{
+		ul{
+			list-style:none;
+			padding:0;
+			margin-left:10px;
+			li{
+				padding-left:0.5em;
+				position:relative;
+				&:before{						
+					background: $tree-poppy;
+					@extend %bullet-point;
+				}
+			}
+		}
+	}
+}

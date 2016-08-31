@@ -1,0 +1,11 @@
+section.right{
+	display:flex;
+	flex-direction:column;
+	flex-basis:255px;
+	position:relative;
+	right:-20px;
+	margin-top:20px;
+	.region{
+		margin-bottom:40px;
+	}
+}

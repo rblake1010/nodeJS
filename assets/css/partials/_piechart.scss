@@ -1,0 +1,37 @@
+.region--main{
+	.block__piechart{
+		background: url('/assets/images/piechart.png');
+		width:511px;
+		height:461px;
+		position:relative;
+		visibility: hidden;
+		.point__prevention{
+			@extend %point;
+			background: $green-haze;
+			left:31px;
+			top:114px;
+		}
+		.point__rehab{
+			@extend %point;
+			background:$tree-poppy;
+			bottom:164px;
+			left:122px;
+		}
+		.point__detection{
+			@extend %point;
+			background: $cerulean;
+			top:129px;
+			right:129px;
+
+		}
+		.point__cross-cutting{
+			@extend %point;
+			background: $astronaut-blue;
+			bottom:60px;
+			right:68px;
+
+		}
+	}
+}
+
+

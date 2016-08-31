@@ -1,0 +1,46 @@
+.region--cross-cutting{
+	.block__title{
+		position:relative;
+		h3{
+			color: $astronaut-blue;
+			@extend %block-title;
+		}
+		.border{
+			@extend %right-border;
+			background:$astronaut-blue;			
+			top:33px;
+		}
+		.border--point{
+			height:2px;
+			background:$astronaut-blue;
+			width:145px;
+			position:absolute;
+			left:-143px;
+			top:49px;
+			transform: rotate(-12deg);
+			-ms-transform: rotate(-12deg); 
+			-webkit-transform: rotate(-12deg);
+			z-index: 500;
+			clip:rect(0px 145px 100px 0px);
+			visibility: hidden;
+		}
+		span{
+			@extend %italic-span;
+		}
+	}
+	.block__list{
+		ul{
+			list-style:none;
+			padding:0;
+			margin-left:10px;
+			li{
+				padding-left:0.5em;
+				position:relative;
+				&:before{
+					background: $astronaut-blue;
+					@extend %bullet-point;
+				}
+			}
+		}
+	}
+}

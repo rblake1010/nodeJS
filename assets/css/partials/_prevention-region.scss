@@ -1,0 +1,44 @@
+.region--prevention{
+	.block__title{
+		position:relative;
+		h3{
+			color: $green-haze;
+			@extend %block-title;
+		}
+		.border{
+			background:$green-haze;
+			@extend %border;
+		}
+		.border--point{
+			height:2px;
+			background:$green-haze;
+			width:133px;
+			position:absolute;
+			right:-96px;
+			bottom:-21px;
+			transform: rotate(211deg);
+			-ms-transform: rotate(211deg); 
+				-webkit-transform: rotate(211deg);
+				clip:rect(0px 133px 100px 0px);
+				visibility: hidden;
+		}
+		span{
+			@extend %italic-span;
+		}
+	}
+	.block__list{
+		ul{
+			list-style:none;
+			padding:0;
+			margin-left:10px;
+			li{
+				padding-left:0.5em;
+				position:relative;
+				&:before{
+					@extend %bullet-point;
+					background: $green-haze;
+				}
+			}
+		}
+	}
+}

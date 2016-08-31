@@ -1,0 +1,47 @@
+.region--detection{
+	.block__title{
+		position:relative;
+		h3{
+			color: $cerulean;
+			@extend %block-title;
+		}
+		.border{
+			@extend %right-border;
+			background:$cerulean;
+			top:50px;
+		}
+		.border--point{
+			height:2px;
+			background: $cerulean;
+			width:212px;
+			position:absolute;
+			left:-207px;
+			bottom:-46px;
+			clip:rect(0px 212px 100px 0px);
+			transform: rotate(-17deg);
+			-ms-transform: rotate(-17deg); 
+			-webkit-transform: rotate(-17deg);
+		    z-index: 500;
+			visibility: hidden;
+		}
+		span{
+			@extend %italic-span;
+		}
+	}
+	.block__list{
+		ul{
+			list-style:none;
+			padding:0;
+			margin-left:10px;
+			li{
+				padding-left:0.5em;
+				position:relative;
+				&:before{					
+					background: $cerulean;
+					@extend %bullet-point;
+					
+				}
+			}
+		}
+	}
+}
