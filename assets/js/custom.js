@@ -4,16 +4,16 @@ $(document).ready(function(){
 	var point = $('.point');
 	var connect = $('.border--point');
 	var border = $('.border');
-	var detection = $('.region--detection .border');
-	var cross_cutting = $('.region--cross-cutting .border');
+	var detection = $('.areaMap--detection .border');
+	var cross_cutting = $('.areaMap--cross-cutting .border');
 	var leftSideTitle = $('section.left .block__title h3');
 	var rightSideTitle = $('section.right .block__title h3');
 	var leftSideList = $('section.left .block__list ul');
 	var rightSideList = $('section.right .block__list ul');
-	var test_detection = $('.region--detection .border--point');
-	var test_cross = $('.region--cross-cutting .border--point');
-	var test_prevention = $('.region--prevention .border--point');
-	var test_rehab = $('.region--rehabilitation .border--point');
+	var test_detection = $('.areaMap--detection .border--point');
+	var test_cross = $('.areaMap--cross-cutting .border--point');
+	var test_prevention = $('.areaMap--prevention .border--point');
+	var test_rehab = $('.areaMap--rehabilitation .border--point');
 
 	var tl = new TimelineMax();
 

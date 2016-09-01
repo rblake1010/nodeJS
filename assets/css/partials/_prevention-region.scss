@@ -1,4 +1,4 @@
-.region--prevention{
+.areaMap--prevention{
 	.block__title{
 		position:relative;
 		h3{
@@ -18,9 +18,9 @@
 			bottom:-21px;
 			transform: rotate(211deg);
 			-ms-transform: rotate(211deg); 
-				-webkit-transform: rotate(211deg);
-				clip:rect(0px 133px 100px 0px);
-				visibility: hidden;
+			-webkit-transform: rotate(211deg);
+			clip:rect(0px 133px 100px 0px);
+			visibility: hidden;
 		}
 		span{
 			@extend %italic-span;

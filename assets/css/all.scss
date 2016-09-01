@@ -1,0 +1,376 @@
+* {-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; -webkit-text-size-adjust: none;  margin: 0px; padding: 0px}
+
+// Colors
+$astronaut-blue: #003F5F;
+$green-haze: #00a160;
+$cerulean: #00A4E4;
+$tree-poppy: #F8971D;
+
+// placeholders
+
+%point{
+	width: 20px;
+	height: 20px;
+	border-radius:50%;
+	border:4px solid #fff;
+	position:absolute;
+	visibility:hidden;
+}
+
+%block-title{
+	font-size: 19px;
+	line-height: 1;
+	margin-bottom: 25px;
+	font-weight:500;
+	margin-left: 16px;
+}
+
+%border{
+	width:0%;
+	height:4px;
+	position:relative;
+	top:-11px;
+}
+
+%italic-span{
+	font-style: italic;
+	font-size: 15px;
+	font-weight: 300;
+}
+
+%bullet-point{
+	content:'';
+	display: block;
+	position: absolute;
+	width:5px;
+	height:5px;
+	border-radius: 50%;
+	top:10px;
+	left:-7px;
+}
+
+%right-border{
+	position:absolute;
+	width:229.5px;
+	height:4px;
+	clip:rect(0px 229.5px 100px 0px);
+}
+
+// animation container
+
+.container{
+	width:100%;
+	max-width:1280px;
+	margin:0 auto;
+	background:url('/assets/images/bg.png') no-repeat center center fixed;
+	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+ 	background-size: cover;
+ 	font-family: 'Roboto', sans-serif;	
+ 	color: #666;	
+ 	font-size: 14px;
+	line-height: 1.6;
+	-webkit-font-smoothing: antialiased;
+}
+
+
+// header
+.areaMap.areaMap--title{
+	display:flex;
+	justify-content:center;
+	padding: 30px 0 33px;
+
+	.block__logo{
+		margin-right: 54px;
+	}
+	.block__title{
+		h1{
+			font-weight: 300;
+			text-transform: uppercase;
+			line-height: 1;
+			margin:0;
+			position:relative;
+			span{
+				font-weight: 700;
+				color: $astronaut-blue;
+			}
+			&:before{
+				content:'';
+				display: block;
+				position: absolute;
+				width:2px; 
+				height:61px;
+				background: #C3C6C8;
+				left:-27px;
+				top:-2px;
+			}
+		}
+	}
+}
+
+main{
+	display:flex; 
+	justify-content:space-around;
+	padding: 0 50px;
+}
+
+// left side
+section.left{
+	display:flex;
+	flex-direction:column;
+	flex-basis:255px;
+	.areaMap{
+		margin-bottom:40px;
+	}
+}
+
+// right side
+section.right{
+	display:flex;
+	flex-direction:column;
+	flex-basis:255px;
+	position:relative;
+	right:-20px;
+	margin-top:20px;
+	.areaMap{
+		margin-bottom:40px;
+	}
+}
+
+
+// prevention section
+.areaMap--prevention{
+	.block__title{
+		position:relative;
+		h3{
+			color: $green-haze;
+			@extend %block-title;
+		}
+		.border{
+			background:$green-haze;
+			@extend %border;
+		}
+		.border--point{
+			height:2px;
+			background:$green-haze;
+			width:133px;
+			position:absolute;
+			right:-96px;
+			bottom:-21px;
+			transform: rotate(211deg);
+			-ms-transform: rotate(211deg); 
+			-webkit-transform: rotate(211deg);
+			clip:rect(0px 133px 100px 0px);
+			visibility: hidden;
+		}
+		span{
+			@extend %italic-span;
+		}
+	}
+	.block__list{
+		ul{
+			list-style:none;
+			padding:0;
+			margin-left:10px;
+			li{
+				padding-left:0.5em;
+				position:relative;
+				&:before{
+					@extend %bullet-point;
+					background: $green-haze;
+				}
+			}
+		}
+	}
+}
+
+// rehab section
+.areaMap--rehabilitation{
+	.block__title{
+		position:relative;
+		h3{
+			color: $tree-poppy;
+			@extend %block-title;
+		}
+		.border{				
+			background:$tree-poppy;
+			@extend %border;
+		}
+		.border--point{
+			height:2px;
+			background:$tree-poppy;
+			width:230px;
+			position:absolute;
+			right:-190px;
+			bottom:66px;
+			transform: rotate(152deg);
+			-ms-transform: rotate(152deg); 
+				-webkit-transform: rotate(152deg);
+				z-index: 500;
+				visibility: hidden;
+				clip:rect(0px 230px 100px 0px);
+		}
+		span{
+			@extend %italic-span;
+		}
+	}
+	.block__list{
+		ul{
+			list-style:none;
+			padding:0;
+			margin-left:10px;
+			li{
+				padding-left:0.5em;
+				position:relative;
+				&:before{						
+					background: $tree-poppy;
+					@extend %bullet-point;
+				}
+			}
+		}
+	}
+}
+
+
+
+// piechart section
+
+.areaMap--main{
+	.block__piechart{
+		background: url('/assets/images/piechart.png');
+		width:511px;
+		height:461px;
+		position:relative;
+		visibility: hidden;
+		.point__prevention{
+			@extend %point;
+			background: $green-haze;
+			left:31px;
+			top:114px;
+		}
+		.point__rehab{
+			@extend %point;
+			background:$tree-poppy;
+			bottom:164px;
+			left:122px;
+		}
+		.point__detection{
+			@extend %point;
+			background: $cerulean;
+			top:129px;
+			right:129px;
+
+		}
+		.point__cross-cutting{
+			@extend %point;
+			background: $astronaut-blue;
+			bottom:60px;
+			right:68px;
+
+		}
+	}
+}
+
+
+// detection section
+
+.areaMap--detection{
+	.block__title{
+		position:relative;
+		h3{
+			color: $cerulean;
+			@extend %block-title;
+		}
+		.border{
+			@extend %right-border;
+			background:$cerulean;
+			top:50px;
+		}
+		.border--point{
+			height:2px;
+			background: $cerulean;
+			width:212px;
+			position:absolute;
+			left:-207px;
+			bottom:-46px;
+			clip:rect(0px 212px 100px 0px);
+			transform: rotate(-17deg);
+			-ms-transform: rotate(-17deg); 
+			-webkit-transform: rotate(-17deg);
+		    z-index: 500;
+			visibility: hidden;
+		}
+		span{
+			@extend %italic-span;
+		}
+	}
+	.block__list{
+		ul{
+			list-style:none;
+			padding:0;
+			margin-left:10px;
+			li{
+				padding-left:0.5em;
+				position:relative;
+				&:before{					
+					background: $cerulean;
+					@extend %bullet-point;
+					
+				}
+			}
+		}
+	}
+}
+
+// cross-cutting section
+
+.areaMap--cross-cutting{
+	.block__title{
+		position:relative;
+		h3{
+			color: $astronaut-blue;
+			@extend %block-title;
+		}
+		.border{
+			@extend %right-border;
+			background:$astronaut-blue;			
+			top:33px;
+		}
+		.border--point{
+			height:2px;
+			background:$astronaut-blue;
+			width:145px;
+			position:absolute;
+			left:-143px;
+			top:49px;
+			transform: rotate(-12deg);
+			-ms-transform: rotate(-12deg); 
+			-webkit-transform: rotate(-12deg);
+			z-index: 500;
+			clip:rect(0px 145px 100px 0px);
+			visibility: hidden;
+		}
+		span{
+			@extend %italic-span;
+		}
+	}
+	.block__list{
+		ul{
+			list-style:none;
+			padding:0;
+			margin-left:10px;
+			li{
+				padding-left:0.5em;
+				position:relative;
+				&:before{
+					background: $astronaut-blue;
+					@extend %bullet-point;
+				}
+			}
+		}
+	}
+}
+
+
+
